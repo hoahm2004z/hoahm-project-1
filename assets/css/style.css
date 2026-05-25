@@ -1,0 +1,566 @@
+/* ================= HEADER ================= */
+.top-bar {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem; /* display-4 */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+.logo img {
+  height: 3rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+.nav-links a {
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+.nav-links a:hover {
+  color: var(--secondary-color);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.phone-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-left: 5px;
+  color: var(--primary-color);
+}
+
+/* ================= 1. HERO SECTION ================= */
+.hero-wrap {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.hero-image,
+.hero-content {
+  flex: 1;
+}
+
+.hero-image {
+  position: relative;
+}
+.price-badge {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  background: var(--secondary-color);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+}
+.price-badge .price {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Kích thước chữ chuẩn display-1 của Mobirise */
+.hero-content h1 {
+  font-size: 4.6rem;
+  color: var(--primary-color);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-features {
+  display: flex;
+  gap: 30px;
+  margin: 2rem 0;
+}
+.product-item img {
+  width: 100%; /* Chiếm toàn bộ chiều ngang của cột */
+  aspect-ratio: 1 / 1; /* Ép tỷ lệ 1:1 (Hình vuông) cho mọi ảnh */
+  object-fit: cover; /* Tự động cắt/zoom ảnh cho đầy khung mà không bị méo */
+  border-radius: 10px; /* Bo tròn góc (giữ nguyên gốc) */
+  margin-bottom: 15px; /* Khoảng cách với chữ (giữ nguyên gốc) */
+}
+
+/* ================= 2. PROMO CARDS ================= */
+/* ================= 2. PROMO CARDS ================= */
+.promo-section {
+  background-color: white;
+}
+
+.promo-wrap {
+  display: flex;
+  gap: 30px;
+}
+
+/* Khung chứa Card */
+.promo-card {
+  flex: 1;
+  position: relative; /* Dùng để chứa Text xếp đè lên trên */
+  border-radius: 10px;
+  overflow: hidden; /* CỰC KỲ QUAN TRỌNG: Ẩn phần ảnh bị phình ra khi Zoom */
+  min-height: 350px; /* Độ cao tối thiểu của card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff; /* Nền trắng cho card */
+}
+
+/* Xử lý khung chứa ảnh làm hình nền */
+.promo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Nằm dưới chữ */
+}
+
+/* Ảnh hiển thị phủ kín và hiệu ứng Zoom */
+.promo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Phủ kín khung, không méo hình */
+  transition: transform 0.5s ease; /* Thời gian Zoom: 0.5 giây mượt mà */
+}
+
+/* Hiệu ứng HOVER: Phóng to ảnh 1.1 lần khi chuột rê vào .promo-card */
+.promo-card:hover .promo-image img {
+  transform: scale(1.1); /* Phóng to 10% */
+}
+
+/* Xử lý phần chữ nổi đè lên trên ảnh */
+.promo-text {
+  position: relative;
+  z-index: 2; /* Nổi lên trên lớp ảnh */
+  padding: 30px;
+  width: 65%; /* Giới hạn chiều rộng chữ để ko che hết hình */
+}
+
+/* Định dạng text bên trong */
+.promo-text h2 {
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.badge {
+  background-color: #0dcaf0; /* Màu xanh ngọc (Tùy chỉnh theo ý bạn) */
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.discount,
+.price-new {
+  font-size: 2.5rem;
+  color: var(--secondary-color); /* Chữ màu Vàng theo ảnh */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.price-old {
+  text-decoration: line-through;
+  font-size: 1.2rem;
+  color: #999;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Nút bấm bên trong Card (Có viền, nền trong suốt -> đổi thành nền xanh đậm) */
+.promo-text .btn-outline {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  margin-top: 10px;
+}
+.promo-text .btn-outline:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* ================= 3. FEATURES ICONS ================= */
+.section-heading h2 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  line-height: 1.2;
+}
+.section-heading p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.icon-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.icon-box {
+  text-align: center;
+  flex: 1;
+}
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background: var(--bg-gray);
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+.icon-box h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* ================= 4. ABOUT SECTION ================= */
+.about-section {
+  background-color: var(--bg-gray);
+}
+.about-wrap {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.about-image,
+.about-content {
+  flex: 1;
+}
+.about-content h2 {
+  font-size: 4.6rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+.about-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* ================= 5. INFO BANNER ================= */
+.info-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-gray);
+  padding: 40px 50px;
+  border-radius: 10px;
+}
+.info-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--primary-color);
+}
+.info-banner-content i {
+  font-size: 2.5rem;
+}
+.info-banner-content h3 {
+  font-size: 1.5rem;
+}
+
+/* ================= 6. FEATURED PRODUCTS (CSS GRID) ================= */
+.section-title-spacing {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Chuẩn 5 cột */
+  gap: 20px;
+}
+.product-item {
+  text-align: center;
+}
+.product-item img {
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.product-item h3 {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+.product-item .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 5px 0;
+}
+.stars i {
+  color: var(--primary-color);
+  font-size: 12px;
+}
+
+/* ================= 7. NEWSLETTER ================= */
+.newsletter-section {
+  background: var(--bg-gray);
+}
+.newsletter-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.newsletter-wrap h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+.newsletter-form input {
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  font-size: 1.2rem;
+  outline: none;
+  width: 350px;
+}
+
+/* ================= 8. TESTIMONIALS ================= */
+.reviews-grid {
+  display: flex;
+  gap: 20px;
+}
+.review-item {
+  text-align: left;
+  flex: 1;
+  background: var(--bg-gray);
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+.review-item p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.review-item h4 {
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+/* ================= 9. CONTACT & MAP ================= */
+.contact-wrap {
+  display: flex;
+  gap: 40px;
+}
+.contact-info {
+  flex: 4;
+}
+.contact-map {
+  flex: 8;
+  min-height: 400px;
+}
+.contact-info h2 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+.contact-info hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+.contact-info h3 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* ================= 10. FOOTER ================= */
+.footer-links-section {
+  padding: 60px 0;
+}
+.footer-links-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-col p {
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.footer-bottom {
+  background: var(--primary-color);
+  color: white;
+  padding: 30px 0;
+}
+.bottom-wrap p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* =======================================================
+   RESPONSIVE (Màn hình nhỏ - Khớp chuẩn Bootstrap)
+   ======================================================= */
+
+/* ----- TABLET (Dưới 992px) ----- */
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+
+  /* Thu nhỏ chữ */
+  .hero-content h1,
+  .about-content h2 {
+    font-size: 3.5rem;
+  }
+  .section-heading h2 {
+    font-size: 2.5rem;
+  }
+
+  /* Layout rớt cột */
+  .hero-wrap,
+  .about-wrap {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .promo-wrap {
+    flex-wrap: wrap;
+  }
+  .promo-card {
+    flex: 0 0 100%;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-wrap {
+    flex-direction: column;
+  }
+  .contact-map {
+    min-height: 300px;
+    width: 100%;
+  }
+}
+
+/* ----- MOBILE (Dưới 768px) ----- */
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+
+  /* Thu nhỏ chữ và khoảng cách */
+  section {
+    padding: 50px 0;
+  }
+  .hero-content h1,
+  .about-content h2 {
+    font-size: 2.5rem;
+  }
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+
+  /* Ẩn menu ngang trên mobile */
+  .nav-links,
+  .nav-right {
+    display: none;
+  }
+
+  /* Chỉnh nút giá trị tiền to bị vỡ */
+  .price-badge {
+    width: 100px;
+    height: 100px;
+    right: 10px;
+  }
+  .price-badge .price {
+    font-size: 2rem;
+  }
+
+  /* Ép tất cả lưới về 1 cột */
+  .icon-grid {
+    flex-direction: column;
+  }
+  .info-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .newsletter-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+  }
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .reviews-grid {
+    flex-direction: column;
+  }
+
+  .footer-links-wrap {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
